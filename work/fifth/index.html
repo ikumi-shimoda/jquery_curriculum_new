@@ -86,12 +86,12 @@
     <script>
       $(function() {
         $('.select').change(function(){
-          var Frameworks = $(this).val();
-          if(Frameworks === 'all'){
+          var frameworks = $(this).val();
+          if(frameworks === 'all'){
             $('ul.list li').each(function(){ $(this).show()});
           } else {
             $('ul.list li').each(function(){
-              if($(this).data("category-type") === Frameworks){
+              if($(this).data("category-type") === frameworks){
                 $(this).show();
               } else {
                 $(this).hide();

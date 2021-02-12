@@ -49,11 +49,10 @@
     <script>
 
       $(function(){
-        var Tab = $(".menu__list").children();
-        Tab.hover(function(){
-          $(this).children().next().stop().slideDown()},
+        $(".menu__list").children().hover(function(){
+          $(this).children('p').next().stop().slideDown()},
           function(){
-            $(this).children().next().stop().slideUp()
+            $(this).children('p').next().stop().slideUp()
             }
           )
         }
