@@ -88,13 +88,13 @@
         $('.select').change(function(){
           var frameworks = $(this).val();
           if(frameworks === 'all'){
-            $('ul.list li').each(function(){ $(this).show()});
+            $('ul.list li').show();
           } else {
-            $('ul.list li').each(function(){
-              if($(this).data("category-type") === frameworks){
-                $(this).show();
+            $('ul.list li').each(function(index, li){
+              if($(li).data("category-type") === frameworks){
+                $(li).show();
               } else {
-                $(this).hide();
+                $(li).hide();
               }
             });
           }
